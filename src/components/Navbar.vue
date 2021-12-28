@@ -3,9 +3,13 @@
     <div class="image">
         <router-link to="/"><img :src="logo" :alt="description"></router-link>
     </div>
-    <router-link to="/">Home</router-link>
-    <span>|</span>
-    <router-link to="/requests">Pedidos</router-link>
+    <div class="btn-header">
+      <router-link to="/">Home</router-link>
+    </div>
+      <span>|</span>
+      <div class="btn-header">
+      <router-link to="/requests">Pedidos</router-link>
+    </div>
   </div>
 </template>
 
@@ -37,7 +41,7 @@ export default {
   }
 
   #nav a {
-    color: yellow;
+    color: black;
     text-decoration: none;
     margin: 10px;
     transition: 0.5s;
@@ -48,6 +52,13 @@ export default {
   }
 
   span {
-    color: white;
+    color: yellow;
+  }
+
+  .btn-header {
+    background: yellow;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 5px;
   }
 </style>
