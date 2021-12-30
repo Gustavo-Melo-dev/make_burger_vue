@@ -1,4 +1,6 @@
 <template>
+<div>
+  <Message :message="message" v-show="message" />
   <div>
     <form id="burger-form" method="POST" @submit="createBurger">
       <div class="input-container">
@@ -12,7 +14,7 @@
         </select>
       </div>
       <div class="input-container">
-        <label for="carne">Escolha a carne do seu Burger:</label>
+        <label for="carne">Escolha a carne do seu hambúrguer:</label>
         <select name="carne" id="carne" v-model="carne">
           <option v-for="(carne, index) in carnes" :key="index" :value="carne.tipo">{{ carne.tipo }}</option>
         </select>
@@ -29,12 +31,17 @@
       </div>
     </form>
   </div>
+</div>
 </template>
 
 <script>
+import Message from './Message.vue'
 
 export default {
   name: "BurgerForm",
+  components: {
+    Message
+  },
   data() {
     return {
       paes: null,
@@ -45,24 +52,49 @@ export default {
       carne: null,
       opcionais: [],
       status: "Solicitado",
-      msg: null
+      message: null,
+      msgView: null,
     }
   },
   methods: {
     async getIngredientes() {
       const req = await fetch("http://localhost:3000/ingredientes");
       const data = await req.json();
-      
       this.paes = data.paes;
       this.carnes = data.carnes;
       this.opcionaisData = data.opcionais;
     },
-    // async getStatus() {
-    //   const req = await fetch("http://localhost:3000/status")
-    // },
-    // async getBurgers() {
-    //   const req = await fetch("http://localhost:3000/burgers")
-    // }
+    async createBurger(event) {
+      event.preventDefault();
+      const data = {
+        nome: this.nome,
+        pao: this.pao,
+        carne: this.carne,
+        opcionais: Array.from(this.opcionais),
+        status: "Solicitado",
+      }
+
+      const dataJson = JSON.stringify(data);
+      
+      const req = await fetch("http://localhost:3000/burgers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json"},
+        body: dataJson
+      });
+
+      const res = await req.json();
+
+      this.message = `Pedido nº ${res.id} realizado com sucesso!`;
+
+      setTimeout(() => {
+        this.message = null;
+      }, 3000);
+
+      this.nome = "";
+      this.pao = "";
+      this.carne = "";
+      this.opcionais = "";
+    }
   },
   mounted() {
     this.getIngredientes();
