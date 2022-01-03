@@ -23,7 +23,7 @@ export default {
     border-top: 3px solid yellow;
     color: yellow;
     bottom: 0;
-    position: absolute fixed;
+    position: fixed;
     width: 100%;
   }
 

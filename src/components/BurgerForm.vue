@@ -163,6 +163,7 @@ export default {
     margin: 0 auto;
     cursor: pointer;
     transition: .5s;
+    margin-bottom: 100px;
   }
 
   .submit-btn:hover {

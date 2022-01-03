@@ -48,7 +48,7 @@ export default {
   }
 
   #nav a:hover {
-    color: rgb(102, 102, 1);
+    color: black;
   }
 
   span {
@@ -60,5 +60,8 @@ export default {
     border-radius: 20px;
     margin: 10px;
     padding: 5px;
+  }
+  .btn-header:hover {
+    background-color: white;
   }
 </style>

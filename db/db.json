@@ -87,21 +87,21 @@
   ],
   "burgers": [
     {
-      "nome": "Gustavo",
-      "pao": "Parmesão e Orégano",
-      "carne": "Alcatra",
+      "nome": "Gustavo Melo",
+      "pao": "3 Queijos",
+      "carne": "Picanha",
       "opcionais": [
         "Bacon",
-        "Salame",
-        "Cebola roxa"
+        "Cheddar",
+        "Tomate"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 1
     },
     {
-      "nome": "Emilly Haine Dourado Amaral",
+      "nome": "Jane Santos",
       "pao": "Hambúrguer",
-      "carne": "Veggie burger",
+      "carne": "Alcatra",
       "opcionais": [
         "Cebola roxa",
         "Tomate",
@@ -111,68 +111,19 @@
       "id": 2
     },
     {
-      "nome": "Gustavo",
-      "pao": "Integral",
+      "nome": "Emilly Haine",
+      "pao": "Parmesão e Orégano",
       "carne": "Filé Mignon",
       "opcionais": [
         "Bacon",
         "Cheddar",
         "Tomate",
+        "Pepino",
+        "Salame",
         "Cebola roxa"
       ],
       "status": "Solicitado",
       "id": 3
-    },
-    {
-      "nome": "Jane Santos",
-      "pao": "Parmesão e Orégano",
-      "carne": "Maminha",
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "nome": "Jane Santos",
-      "pao": "Integral",
-      "carne": "Filé Mignon",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 5
-    },
-    {
-      "nome": "Gustavão",
-      "pao": "Parmesão e Orégano",
-      "carne": "Maminha",
-      "opcionais": [
-        "Salame",
-        "Pepino",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 6
-    },
-    {
-      "nome": "Arrow",
-      "pao": "3 Queijos",
-      "carne": "Maminha",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 7
-    },
-    {
-      "nome": "Emilly Haine Dourado Amaral",
-      "pao": "Hambúrguer",
-      "carne": "Alcatra",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 8
     }
   ]
 }
